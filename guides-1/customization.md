@@ -1,14 +1,10 @@
 # Customization
 
-**TODO: Connectivity SDK api reference for custom methods (not for the connector interface)**
-
 The connectivity SDK can be visually customized for an improved end user experience.
-
-**NOTE: we don't want to duplicate the API reference here - only focus on guides. Developers can find missing references directly using code completion.**
 
 ## Setting the application DID
 
-Each dApp needs to generate its own DID, called the application DID. This can be done with any identity wallet able to generate a DID. Then, the dApp can let the connectivity SDK know what is its DID. By doing so, identity wallets can customize their screens to display dApp information, for example when getting credentials from users.
+Each dApp needs to generate its own DID, called the application DID. This can be done with any identity wallet (ie: Elastos Essentials through the "Developer mode" menu) able to generate a DID. Then, the dApp can let the connectivity SDK know what is its DID. By doing so, identity wallets can customize their screens to display dApp information, for example when getting credentials from users.
 
 {% hint style="info" %}
 After creating the application DID in an identity wallet, you may also want to set an avatar and proper name for it, as this is what is used by identity wallets to inform users of the requesting dApp.
@@ -49,6 +45,7 @@ In case your dApp chooses to use the default UI (for instance, the connector pro
 
 {% tabs %}
 {% tab title="Typescript" %}
+
 ```typescript
 import { theme } from "@elastosfoundation/elastos-connectivity-sdk-js";
 
@@ -57,9 +54,25 @@ theme.enableDarkMode(true);
 {% endtab %}
 {% endtabs %}
 
+## Language configuration
 
+English, French and Mandarin Chinese are the three languages currently provided by default by the connectivity SDK. They are used by the connector prompt mostly. It is also possible to add new languages, force the used language, or translate some strings using the following methods:
 
+{% tabs %}
+{% tab title="Typescript" %}
 
+```typescript
+import { localization } from "@elastosfoundation/elastos-connectivity-sdk-js";
+
+localization.addLanguage("it", [
+  "item": "Translation"
+]);
+localization.setLanguage("it");
+let translated = localizatiion.translateInstant("item");
+```
+
+{% endtab %}
+{% endtabs %}
 
 ****
 
