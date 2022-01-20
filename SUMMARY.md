@@ -2,13 +2,13 @@
 
 * [Introduction](README.md)
 
-## Guides <a href="guides-1" id="guides-1"></a>
+## Guides <a href="#guides-1" id="guides-1"></a>
 
 * [Setup](guides-1/guides.md)
 * [Decentralized Identity](guides-1/decentralised-identities/README.md)
   * [Elastos IO adapter](guides-1/decentralised-identities/elastos-io-adapter.md)
 * [Ethereum](guides-1/ethereum/README.md)
-  * [Web3 provider](guides-1/ethereum/web3-provider.md)
+  * [Web3 Provider](guides-1/ethereum/web3-provider.md)
 * [Customization](guides-1/customization.md)
 * [Manage connectors](guides-1/manage-connectors.md)
 

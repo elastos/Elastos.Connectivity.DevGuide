@@ -1,3 +1,3 @@
-# Web3 provider
+# Web3 Provider
 
-send transaction
+Send transaction
