@@ -4,21 +4,21 @@ The connectivity SDK provides interfaces that can be implemented by new third pa
 
 In order to provide your own identity wallet or service, you can developer a connector that implements those interfaces, and distribute your connector to developers, that can then add them to their existing application with a simple call to **connectivity.registerConnector()**.
 
-## Main connector interface 
+## Main Connector Interface
 
 {% hint style="info" %}
 Interface: **IConnector**
 {% endhint %}
 
-This root interface implements sub-interfaces such are the identity interface. 
+This root interface implements sub-interfaces such are the identity interface.
 
-### Get display name
+### Get Display Name
 
 This method should return a user friendly connector name that is displayed when multiple connectors are present, in order to let users choose the one they want to use.
 
-### Get Web3 provider
+### Get Web3 Provider
 
-For connectors that provide access to crypto operations, **getWeb3Provider**() can be implemented to return an ethereum "provider" used by most EVM-compatible web3 dApps. This provider will be called by applications to run commands such as sendTransaction(), "eth_getAccounts()", etc.
+For connectors that provide access to crypto operations, **getWeb3Provider**() can be implemented to return an ethereum "provider" used by most EVM-compatible web3 dApps. This provider will be called by applications to run commands such as sendTransaction(), "eth\_getAccounts()", etc.
 
 ## Identity (DID) interface
 
@@ -26,29 +26,29 @@ For connectors that provide access to crypto operations, **getWeb3Provider**() c
 Interface: **IDIDConnectorAPI**
 {% endhint %}
 
-### Request DID credentials
+### Request DID Credentials
 
-Used to request credentials from user identity, based on the requested CredentialDisclosureRequest. 
+Used to request credentials from user identity, based on the requested CredentialDisclosureRequest.
 
 A DID Verifiable Presentation is returned, including the list of related credentials found in user's identity wallet.
 
 A **claim** is made of several fields including:
 
-- A **reason** (displayable explanation to the user as of why the app is requesting data from him).
-- A **query** that is a json-path query format that can be used to directly search matching credentials JSON content in the identity wallet.
-- A **min** and a **max** number of credentials accepted to fulfill this claim. User should provide at least min matching credentials, and at most max. Typically, if an application requests some data but makes this requirement optional, min will be 0. If an application accepts more than one credentials (ie the list of all user's diplomas), max can be more than 1.
-- An optional list of accepted **issuers**. If set, the identity wallet needs to make sure that the credentials selected by the user have been issued by one of the issuers in this list. This field is used by application for trust only some issuers, not anyone, as providers of the credentials they are going to use.
-- An optional list of **noMatchRecommendations**, that should be displayed by the identity wallet when the user has no credentials matching the claims. This is a helper provided by applications to let users know how or where they can get suitable credentials. For instance, if users don't have their diploma credentials yet, the url of the central diploma office dApp could be provided so that users just have to touch the link to reach that dApp.
+* A **reason** (displayable explanation to the user as of why the app is requesting data from him).
+* A **query** that is a json-path query format that can be used to directly search matching credentials JSON content in the identity wallet.
+* A **min** and a **max** number of credentials accepted to fulfill this claim. User should provide at least min matching credentials, and at most max. Typically, if an application requests some data but makes this requirement optional, min will be 0. If an application accepts more than one credentials (ie the list of all user's diplomas), max can be more than 1.
+* An optional list of accepted **issuers**. If set, the identity wallet needs to make sure that the credentials selected by the user have been issued by one of the issuers in this list. This field is used by application for trust only some issuers, not anyone, as providers of the credentials they are going to use.
+* An optional list of **noMatchRecommendations**, that should be displayed by the identity wallet when the user has no credentials matching the claims. This is a helper provided by applications to let users know how or where they can get suitable credentials. For instance, if users don't have their diploma credentials yet, the url of the central diploma office dApp could be provided so that users just have to touch the link to reach that dApp.
 
-### Issue DID credentials
+### Issue DID Credentials
 
 **Requests the identity app to generate a Verifiable Credential** using the given information and to **return it**. While the content is suggested by the caller of this method, the credential itself is generated by the identity app and signed (issued) by the identity app user. This is what could be called a passive way to generate credentials. Instead of having someone generate a credential with a whole content directly, a third party provides the pre-filled information, and the identity owner only packages and signs this information.
 
-*Example*: A student wants to get a diploma credential. The university is not yet equipped with DID integration in its IT infrastructure. A third party web app named MyDiploma.com can get users information from their LinkedIn profile, organize this information according to a standardized "diploma" credential format, and just ask the university admin to generate and sign the credential, through this issueCredential() method. This way, the only material needed by the university is an identity app, and students can start getting their DID credentials without waiting for more complex technical integrations.
+_Example_: A student wants to get a diploma credential. The university is not yet equipped with DID integration in its IT infrastructure. A third party web app named MyDiploma.com can get users information from their LinkedIn profile, organize this information according to a standardized "diploma" credential format, and just ask the university admin to generate and sign the credential, through this issueCredential() method. This way, the only material needed by the university is an identity app, and students can start getting their DID credentials without waiting for more complex technical integrations.
 
 Please refer to the connectivity SDK interface files for more implementation details.
 
-### Import DID credentials
+### Import DID Credentials
 
 The **application** sends one or more verifiable credentials **to the identity wallet**, so that user can decide to import them to his DID profile and optionally publish those credentials as part of his public DID Document. The identity wallet application may display a summary of the credentails contents so that user can review them before accepting to import them.
 
@@ -56,23 +56,23 @@ The list of credentials that were accepted and imported by the user are returned
 
 Please refer to the connectivity SDK interface files for more implementation details.
 
-### Delete DID credentials
+### Delete DID Credentials
 
-Deletes one or more credentials from user's identity, based on a credential ID. Returns the list of credential IDs that were actually deleted from user's identity. 
+Deletes one or more credentials from user's identity, based on a credential ID. Returns the list of credential IDs that were actually deleted from user's identity.
 
 Usually, applications barely need to call such method. Nevertheless, this is sometimes useful for some kind of "delegated identity management" by some third party applications.
 
 Please refer to the connectivity SDK interface files for more implementation details.
 
-### Sign data with DID
+### Sign Data with DID
 
 **Signs** some data **with user's DID**. The returned data contains a JWT string signed by user's DID.
 
 Please refer to the connectivity SDK interface files for more implementation details.
 
-### Generate an app ID credential
+### Generate an App ID Credential
 
-Accessing Hive storages (vaults) require the identity wallet to confirm that the application is trusted and can access user's storage. This happens through a specific DID credential type and this is done automatically during Hive clients authentication flow. 
+Accessing Hive storages (vaults) require the identity wallet to confirm that the application is trusted and can access user's storage. This happens through a specific DID credential type and this is done automatically during Hive clients authentication flow.
 
 When calling this method, the application provides the target application DID it wants to get access to. In order to make sure an application is not trying to deceive the user by trying to get access to another application's context, the identity wallet must fetch the target application's DID Document from the identity chain and extract the "application credential" from that document (then display its content for confirmation). That credential contains the app icon and title defined by the target application developer. As a result, if an application named ABC tries to get access to Google's app context, users see "Google" and may reject the request.
 
