@@ -1,4 +1,4 @@
-# Manage connectors
+# Manage Connectors
 
 The Connectivity SDK can support several connectors inside the same application so that users can choose the service they want to use. So far, only 2 connectors are available: the **local identity connector**, and the **Elastos Essentials connector**.
 
@@ -6,7 +6,7 @@ The Connectivity SDK can support several connectors inside the same application 
 At least one connector must be provided for each dApp, otherwise connectivity operations cannot be ran. Web dApp usually don't need the local identity connector, while native mobile apps may need it in order to pass the app store review team validation (i.e. iTunes), as app stores do not accept applications that force users to install another application (a wallet) to access the features.
 {% endhint %}
 
-## Register a connector
+## Register a Connector
 
 As seen on the setup page, a connector can be registered like this:
 

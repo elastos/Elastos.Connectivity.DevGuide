@@ -10,7 +10,7 @@
 * [Ethereum](guides-1/ethereum/README.md)
   * [Web3 Provider](guides-1/ethereum/web3-provider.md)
 * [Customization](guides-1/customization.md)
-* [Manage connectors](guides-1/manage-connectors.md)
+* [Manage Connectors](guides-1/manage-connectors.md)
 
 ## Connectors
 
