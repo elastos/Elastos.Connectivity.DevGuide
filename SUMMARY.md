@@ -15,5 +15,5 @@
 ## Connectors
 
 * [The Local Identity Connector](connectors/local-identity-connector.md)
-* [Writing a custom connector](connectors/writing-a-custom-connector/README.md)
+* [Writing a Custom Connector](connectors/writing-a-custom-connector/README.md)
   * [The Connectivity Interface](connectors/writing-a-custom-connector/the-connectivity-interface.md)
