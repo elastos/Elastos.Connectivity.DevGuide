@@ -25,7 +25,7 @@ npm install @elastosfoundation/did-js-sdk
 {% endtab %}
 {% endtabs %}
 
-### Register at least one connector
+### Register at Least One Connector
 
 Let's register the Elastos Essentials Connector as an initial example. You can choose to use one or more connectors in your application.
 
