@@ -22,7 +22,7 @@ let didAccess = new ConnDID.DIDAccess();
 {% endtab %}
 {% endtabs %}
 
-## Get User's DID data / credentials
+## Get user's DID data / credentials
 
 In order for a third party application to get a user's "DID string" (DID identifier) or email, it can request the identity wallet to "get some credentials". Here's how it works:
 
@@ -54,7 +54,7 @@ console.log("Thank you for joining " + nameCredential.getSubject().getProperty("
 {% endtabs %}
 
 {% hint style="info" %}
-**Tip:** If you want to get a user's DID string (did:elastos:abc) only, pass an empty list of claims.
+**Tip: **If you want to get a user's DID string (did:elastos:abc) only, pass an empty list of claims.
 {% endhint %}
 
 Here's an example of a user prompt generated inside the Elastos Essentials identity wallet (using the **Elastos Essentials Connector**), after a call to didAccess.getCredentials(). On the client side, the call to didAccess.getCredentials() receives a response only after the user accepts or rejects this request:
@@ -67,7 +67,7 @@ The main idea behind DIDs is for various actors to generate credentials to and r
 
 In a decentralized world, applications never write DID data (credentials) directly somewhere. Instead, they **generate credentials** and **ask users to import credentials to their identity profile**. Users can choose to make such credentials visible from all (by publishing them on the blockchain) or to keep them private (stored only on their device).&#x20;
 
-The first step before asking a user to import a credential is to create the credential itself. More details on creating credentials are provided in the **"TODO - DID SDK DOCUMENTATION".** For our Connectivity SDK guide, we utilize the simplest possible way to do so.
+The first step before asking a user to import a credential is to create the credential itself. More details on creating credentials are provided in the** "TODO - DID SDK DOCUMENTATION". **For our Connectivity SDK guide, we utilize the simplest possible way to do so.
 
 {% tabs %}
 {% tab title="Typescript" %}
@@ -121,7 +121,9 @@ let importedCredentials = await didAccess.importCredentials([credential], option
 {% endtab %}
 {% endtabs %}
 
-## Issue a Credential for Another DID
+## Delete Credentials from User's DID
+
+## Issue a credential for another DID
 
 Third party applications can prepare credential information on their side and request the user to sign and return a credential from the identity application. For instance, for convenience, a medical web app can prepare data for a doctor to create a drug prescription credential, and the doctor only needs to check the content then sign this, from his identity app, without manually doing any other operation.
 
@@ -144,7 +146,7 @@ let issuedCredential = await didAccess.issueCredential(
 {% endtab %}
 {% endtabs %}
 
-## Delete Credentials from User's DID
+## Delete credentials from user's DID
 
 When applications consider a credential currently in a user's profile as obsolete, they can request to delete it. As usual with decentralized identities, applications have no way to directly delete credentials by themselves - instead, they need to ask the identity wallet and user to do this.
 
