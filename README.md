@@ -13,13 +13,3 @@ These operations are usually provided by another application, the **"wallet"** w
 The Connectivity SDK provides an easy-to-use interface for all operations that require user interaction in a wallet app, such as retrieving DID credentials, calling smart contracts, or authenticating on an Elastos Hive provider in order to manage data storage.
 
 This SDK provides a **flexible architecture** and **custom** **connectors** that implement the Connectivity SDK interface so it can be dynamically added. Currently, the two recommended connectors are the **Elastos Essentials connector** (which implements communications between apps and the Elastos Essentials wallet) and the **Local Identity Connector** (an embedded connector that manages only very simple operations to more easily onboard new users).
-
-#### TODO external link to the Elastos Essentials connector for reference
-
-{% content-ref url="connectors/local-identity-connector.md" %}
-[local-identity-connector.md](connectors/local-identity-connector.md)
-{% endcontent-ref %}
-
-
-
-##
