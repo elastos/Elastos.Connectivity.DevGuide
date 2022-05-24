@@ -1,6 +1,6 @@
-# Writing a Custom Connector
+# Writing a custom connector
 
-The main objective of the connectivity SDK is to let any wallet provide its own connector, in order to give more choices to dApps and end-users. Currently, the Elastos Essentials connector is the first one that was written, but as more wallet apps supporting this SDK will emerge, related connectors will be provided as well.
+The main objective of the connectivity SDK is to let any wallet provide its own connector, in order to give more choices to dApps and end users. Currently, the Elastos Essentials connector is the first one that was written, but as more wallet apps supporting this SDK will emerge, related connectors will be provided as well.
 
 Connectors must implement a specific interface from the connectivity SDK and be deployed as standalone libraries that developers can install.&#x20;
 
