@@ -1,6 +1,6 @@
 # Customization
 
-The Connectivity SDK can be visually customized for an improved end-user experience.
+The Connectivity SDK can be visually customized for an improved end user experience.
 
 ## Setting the Application DID
 
