@@ -2,7 +2,7 @@
 
 ## The Javascript window.elastos instance
 
-In **javascript** environments (using the Connectivity SDK JS), **mobile wallets** supporting Elastos features - such as Elastos Essentials - define the global **window.elastos** instance in their in-app browser, similarly to window.ethereum used to inject Ethereum Web3 providers.
+In **javascript** environments (using the Connectivity SDK JS), **mobile wallets** supporting Elastos features - such as Elastos Essentials - define the global **window.elastos** instance in their in-app browser, similarly to window.ethereum used to inject ethereum Web3 providers.
 
 ### window.elastos replaces other connectors
 
@@ -10,7 +10,7 @@ When window.elastos is defined (injected by the parent native browser or plugin)
 
 ### window.elastos is not window.ethereum
 
-If you are used to write Ethereum web3 apps, you may have used window.ethereum as a web3 instance to execute Ethereum requests.
+If you are used to write ethereum web3 apps, you may have used window.ethereum as a web3 instance to execute ethereum requests.
 
 Elastos' window.elastos is similar, but used to pass Elastos specific commands such as DID credential requests (eg: requestCredentials(), to "sign in with DID")
 
