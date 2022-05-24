@@ -57,7 +57,7 @@ console.log("Thank you for joining " + nameCredential.getSubject().getProperty("
 **Tip:** If you want to get a user's DID string (did:elastos:abc) only, pass an empty list of claims.
 {% endhint %}
 
-Here's an example of a user prompt generated inside the Elastos Essentials identity wallet (using the **Elastos Essentials Connector**), after a call to didAccess.getCredentials(). On the client-side, the call to didAccess.getCredentials() receives a response only after the user accepts or rejects this request:
+Here's an example of a user prompt generated inside the Elastos Essentials identity wallet (using the **Elastos Essentials Connector**), after a call to didAccess.getCredentials(). On the client side, the call to didAccess.getCredentials() receives a response only after the user accepts or rejects this request:
 
 ![](../../.gitbook/assets/pasted-image.png)
 
