@@ -47,7 +47,7 @@ else {
 
 ### Use case 2: crypto address only, no connectivity SDK
 
-For your reference as well as for comparison of the 2 use cases, even if this is not part of the connectivity SDK, here is the flow f your dApp needs users to provide only a EVM address (ethereum compatible):
+For your reference as well as for comparison of the 2 use cases, even if this is not part of the connectivity SDK, here is the flow f your dApp needs users to provide only an EVM address (Ethereum compatible):
 
 ```typescript
 if (mobile) {

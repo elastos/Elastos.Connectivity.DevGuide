@@ -7,6 +7,7 @@
 * [Setup](guides-1/guides.md)
 * [Decentralized Identity](guides-1/decentralised-identities/README.md)
   * [Elastos IO adapter](guides-1/decentralised-identities/elastos-io-adapter.md)
+* [User experience](guides-1/user-experience.md)
 * [Ethereum](guides-1/ethereum.md)
 * [User interface](guides-1/user-interface/README.md)
   * [A nice "Connect wallet" flow](guides-1/user-interface/a-nice-connect-wallet-flow.md)
