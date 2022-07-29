@@ -1,4 +1,4 @@
-# User experience
+# 🌠 User Experience
 
 In order to facilitate the overall user flow between dApps and identity wallets, the connectivity SDK provide a "UX" section. Currently, only one method is defined.
 

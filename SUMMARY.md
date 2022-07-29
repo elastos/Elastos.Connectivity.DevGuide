@@ -1,18 +1,18 @@
 # Table of contents
 
-* [Introduction](README.md)
+* [ℹ Introduction](README.md)
 
 ## Guides <a href="#guides-1" id="guides-1"></a>
 
-* [Setup](guides-1/guides.md)
-* [Decentralized Identity](guides-1/decentralised-identities/README.md)
+* [☑ Setup](guides-1/guides.md)
+* [🆔 Decentralized Identity](guides-1/decentralised-identities/README.md)
   * [Elastos IO adapter](guides-1/decentralised-identities/elastos-io-adapter.md)
-* [User experience](guides-1/user-experience.md)
-* [Ethereum](guides-1/ethereum.md)
-* [User interface](guides-1/user-interface/README.md)
-  * [A nice "Connect wallet" flow](guides-1/user-interface/a-nice-connect-wallet-flow.md)
-* [Customization](guides-1/customization.md)
-* [Manage Connectors](guides-1/manage-connectors.md)
+* [🌠 User Experience](guides-1/user-experience.md)
+* [🪙 Ethereum](guides-1/ethereum.md)
+* [👍 User Interface](guides-1/user-interface/README.md)
+  * [A Nice "Connect wallet" Flow](guides-1/user-interface/a-nice-connect-wallet-flow.md)
+* [🧤 Customization](guides-1/customization.md)
+* [⛓ Manage Connectors](guides-1/manage-connectors.md)
 
 ## Connectors
 
