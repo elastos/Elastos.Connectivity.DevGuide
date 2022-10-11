@@ -1,6 +1,6 @@
 # The Essentials Connector
 
-The **Elastos Essentials connector** allows your dApp to communicate with the Elastos Essentials wallet to do identity and other operations (in addition to crypto operations).
+The **Elastos Essentials connector** allows your dApp to communicate with the Essentials wallet to do identity and other operations (in addition to crypto operations).
 
 Quick start:
 
@@ -22,5 +22,5 @@ connectivity.registerConnector(essentialsConnector);
 {% endtab %}
 {% endtabs %}
 
-For more information, please refer to the **Elastos Essentials documentation**.
+For more information, please refer to the **** [**Essentials documentation**](https://essentials-docs.trinity-tech.io/).
 
